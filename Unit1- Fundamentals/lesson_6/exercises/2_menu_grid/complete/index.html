@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Grid - Restaurant Menu</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="bg-dark text-white text-center p-3 mb-4">
+      <h1>Delicious Restaurant</h1>
+      <p>Learning Bootstrap Grid with a Simple Menu</p>
+    </header>
+
+    <main class="container">
+      <section class="intro text-center mb-5">
+        <h2 class="mb-3">Bootstrap Grid Exercise</h2>
+        <p>
+          In this exercise, you'll practice using Bootstrap's grid system to
+          create a responsive restaurant menu.
+        </p>
+      </section>
+
+      <!-- Instructions -->
+      <section class="mb-5">
+        <div class="bg-light p-4 border rounded">
+          <h3>Your Tasks:</h3>
+          <ol>
+            <li>
+              Add Bootstrap column classes to the menu categories:
+              <ul>
+                <li>
+                  On mobile: Each category should take full width (one per row)
+                </li>
+                <li>On medium screens (md): Two categories per row</li>
+                <li>On large screens (lg): All four categories in one row</li>
+              </ul>
+            </li>
+            <li>Look at the example at the bottom of the page for guidance</li>
+            <li>
+              Add the appropriate classes to the indicated areas marked with
+              comments
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Menu Section -->
+      <section class="menu mb-5">
+        <h2 class="text-center mb-4">Our Menu</h2>
+
+        <!-- Menu Categories Row -->
+        <div class="row">
+          <!-- 
+            TASK: Add appropriate column classes to each menu-category div
+            - Mobile: Full width (default)
+            - Medium screens (md): Two categories per row 
+            - Large screens (lg): Four categories in one row
+          -->
+
+          <!-- Appetizers - Add your column classes here -->
+          <div class="col-12 col-md-6 col-lg-3 menu-category">
+            <h3 class="category-title">Appetizers</h3>
+            <!-- Menu items are already styled, no need to modify -->
+            <div class="menu-item">
+              <h4 class="item-name">Garlic Bread</h4>
+              <p class="item-description">
+                Freshly baked bread with garlic butter
+              </p>
+              <p class="item-price">$5.99</p>
+            </div>
+            <div class="menu-item">
+              <h4 class="item-name">Mozzarella Sticks</h4>
+              <p class="item-description">
+                Crispy fried mozzarella with marinara sauce
+              </p>
+              <p class="item-price">$7.99</p>
+            </div>
+          </div>
+
+          <!-- Main Courses - Add your column classes here -->
+          <div class="col-12 col-md-6 col-lg-3 menu-category">
+            <h3 class="category-title">Main Courses</h3>
+            <!-- Menu items are already styled, no need to modify -->
+            <div class="menu-item">
+              <h4 class="item-name">Grilled Salmon</h4>
+              <p class="item-description">
+                Fresh salmon with seasonal vegetables
+              </p>
+              <p class="item-price">$18.99</p>
+            </div>
+            <div class="menu-item">
+              <h4 class="item-name">Pasta Primavera</h4>
+              <p class="item-description">Fettuccine with fresh vegetables</p>
+              <p class="item-price">$15.99</p>
+            </div>
+          </div>
+
+          <!-- Desserts - Add your column classes here -->
+          <div class="col-12 col-md-6 col-lg-3 menu-category">
+            <h3 class="category-title">Desserts</h3>
+            <!-- Menu items are already styled, no need to modify -->
+            <div class="menu-item">
+              <h4 class="item-name">Chocolate Cake</h4>
+              <p class="item-description">Rich chocolate layer cake</p>
+              <p class="item-price">$6.99</p>
+            </div>
+            <div class="menu-item">
+              <h4 class="item-name">Cheesecake</h4>
+              <p class="item-description">New York style cheesecake</p>
+              <p class="item-price">$7.99</p>
+            </div>
+          </div>
+
+          <!-- Beverages - Add your column classes here -->
+          <div class="col-12 col-md-6 col-lg-3 menu-category">
+            <h3 class="category-title">Beverages</h3>
+            <!-- Menu items are already styled, no need to modify -->
+            <div class="menu-item">
+              <h4 class="item-name">Coffee</h4>
+              <p class="item-description">Freshly brewed coffee</p>
+              <p class="item-price">$2.99</p>
+            </div>
+            <div class="menu-item">
+              <h4 class="item-name">Fresh Juices</h4>
+              <p class="item-description">Orange, apple, or grapefruit</p>
+              <p class="item-price">$3.99</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example Section -->
+      <section class="example mb-5">
+        <h3 class="text-center mb-3">Example: Bootstrap Column Classes</h3>
+        <div class="bg-light p-3 border rounded">
+          <p>Here's how to add column classes to create a responsive layout:</p>
+          <pre class="code-block">
+&lt;div class="row"&gt;
+  &lt;div class="col-12 col-md-6 col-lg-3"&gt;
+    Content goes here
+  &lt;/div&gt;
+&lt;/div&gt;
+          </pre>
+          <p>The classes mean:</p>
+          <ul>
+            <li>
+              <code>col-12</code>: Takes full width on mobile (12 columns out of
+              12)
+            </li>
+            <li>
+              <code>col-md-6</code>: Takes half width on medium screens (6
+              columns out of 12)
+            </li>
+            <li>
+              <code>col-lg-3</code>: Takes quarter width on large screens (3
+              columns out of 12)
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+      <p>Bootstrap Grid Exercise | Software Development Bootcamp</p>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

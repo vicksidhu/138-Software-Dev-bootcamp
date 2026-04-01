@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <title>CSS Normal Flow Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* Block elements take up full width by default */
+      .block-example {
+        background-color: #f0f0f0;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+      }
+
+      /* Inline elements only take up as much space as they need */
+      .inline-example {
+        background-color: #e0f7fa;
+        padding: 5px;
+        border: 1px solid #80deea;
+      }
+
+      /* Adding different colors to help visualize */
+      .block-1 {
+        background-color: #ffecb3;
+      }
+      .block-2 {
+        background-color: #c8e6c9;
+      }
+      .block-3 {
+        background-color: #bbdefb;
+      }
+
+      /* Container to demonstrate flow */
+      .container {
+        border: 2px dashed #9e9e9e;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      /* Add styles for visualization */
+      h2 {
+        color: #333;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 5px;
+      }
+
+      .explanation {
+        font-style: italic;
+        color: #555;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Normal Flow Example</h1>
+
+    <div class="explanation">
+      Normal flow is the default layout of HTML elements before any CSS
+      positioning or layout techniques are applied.
+    </div>
+
+    <h2>Block-Level Elements</h2>
+    <div class="explanation">
+      Block elements stack vertically and take up the full width available by
+      default.
+    </div>
+
+    <div class="container">
+      <div class="block-example block-1">
+        This is a block element. It takes up the full width of its container.
+      </div>
+
+      <div class="block-example block-2">
+        This is another block element. Notice how it appears below the previous
+        element.
+      </div>
+
+      <div class="block-example block-3">
+        Yet another block element. Block elements always start on a new line.
+      </div>
+    </div>
+
+    <h2>Inline Elements</h2>
+    <div class="explanation">
+      Inline elements flow horizontally and only take up as much width as
+      necessary.
+    </div>
+
+    <div class="container">
+      <span class="inline-example">This is an inline element.</span>
+      <span class="inline-example">This is another inline element.</span>
+      <span class="inline-example">Yet another inline element.</span>
+      <span class="inline-example">Inline elements flow horizontally.</span>
+      <span class="inline-example">They don't create line breaks.</span>
+    </div>
+
+    <h2>Mixed Elements</h2>
+    <div class="explanation">
+      Here's how block and inline elements interact in normal flow.
+    </div>
+
+    <div class="container">
+      <div class="block-example">
+        This is a block element that contains some text and
+        <span class="inline-example">an inline element</span>
+        within it. Notice how the inline element flows with the text.
+      </div>
+
+      <span class="inline-example">This is an inline element.</span>
+      <span class="inline-example">And another.</span>
+
+      <div class="block-example">
+        This block element creates a new line, regardless of the inline elements
+        above.
+      </div>
+    </div>
+  </body>
+</html>

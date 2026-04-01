@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Exercise 3: Float Layout</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>The Floating Bistro</h1>
+        <p>Where great food and good times float together</p>
+      </header>
+
+      <section class="featured-menu">
+        <h2>Featured Menu Items</h2>
+
+        <div class="menu-item">
+          <img
+            src="https://placehold.co/120x120/brown/white?text=Pizza"
+            alt="Margherita Pizza"
+          />
+          <div class="menu-content">
+            <h3>Margherita Pizza</h3>
+            <p>
+              Classic pizza with tomato sauce, fresh mozzarella, and basil
+              leaves. Made with our special homemade dough and baked in a
+              traditional brick oven for the perfect crispy yet chewy texture.
+            </p>
+            <div class="menu-price">$14.99</div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img
+            src="https://placehold.co/120x120/yellow/black?text=Pasta"
+            alt="Spaghetti Carbonara"
+          />
+          <div class="menu-content">
+            <h3>Spaghetti Carbonara</h3>
+            <p>
+              Al dente spaghetti tossed with a creamy sauce made from eggs,
+              Pecorino Romano cheese, pancetta, and black pepper. A true Italian
+              classic that's rich and satisfying.
+            </p>
+            <div class="menu-price">$16.99</div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img
+            src="https://placehold.co/120x120/red/white?text=Steak"
+            alt="Grilled Ribeye"
+          />
+          <div class="menu-content">
+            <h3>Grilled Ribeye Steak</h3>
+            <p>
+              12oz prime ribeye steak grilled to perfection and served with
+              roasted garlic mashed potatoes and seasonal vegetables. Finished
+              with a red wine reduction sauce.
+            </p>
+            <div class="menu-price">$29.99</div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img
+            src="https://placehold.co/120x120/orange/white?text=Salmon"
+            alt="Grilled Salmon"
+          />
+          <div class="menu-content">
+            <h3>Grilled Salmon</h3>
+            <p>
+              Fresh Atlantic salmon fillet grilled and topped with lemon dill
+              sauce. Served with wild rice pilaf and steamed asparagus for a
+              healthy, flavorful meal.
+            </p>
+            <div class="menu-price">$22.99</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>About Our Restaurant</h2>
+        <div class="about-content">
+          <img
+            src="https://placehold.co/300x200/blue/white?text=Restaurant"
+            alt="Restaurant Interior"
+            class="about-image"
+          />
+          <p>
+            The Floating Bistro was established in 2010 with a simple mission:
+            to provide delicious, high-quality food in a warm and inviting
+            atmosphere. Our chefs use only the freshest ingredients, sourced
+            locally whenever possible, to create dishes that delight the senses.
+          </p>
+          <p>
+            What sets us apart is our commitment to both traditional cooking
+            methods and innovative culinary techniques. We believe that good
+            food brings people together, and we strive to make every dining
+            experience special.
+          </p>
+          <p>
+            Whether you're joining us for a romantic dinner, a family
+            celebration, or a casual meal with friends, we look forward to
+            serving you and exceeding your expectations.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <div class="instructions">
+      <h2>Exercise Instructions:</h2>
+      <p>Style this page using CSS Floats to achieve the following:</p>
+      <ol>
+        <li>
+          Make the images in each menu item float to the left, with text
+          wrapping around them
+        </li>
+        <li>
+          Make the About section image float to the right, with text wrapping
+          around it
+        </li>
+        <li>Fix any container collapse issues using clearfix</li>
+        <li>
+          Add appropriate margins and padding to create a professional layout
+        </li>
+      </ol>
+      <p>
+        <strong>Note:</strong> Edit only the CSS file. Do not modify the HTML.
+      </p>
+      <p><strong>Time:</strong> You have 10 minutes for this exercise.</p>
+      <p>
+        <strong>Hint:</strong> Look for the TODO comments in the CSS file for
+        guidance. Remember that floated elements need proper handling to prevent
+        container collapse.
+      </p>
+      <p>
+        <strong>Tip:</strong> Review how the clearfix technique works and where
+        it should be applied.
+      </p>
+    </div>
+  </body>
+</html>

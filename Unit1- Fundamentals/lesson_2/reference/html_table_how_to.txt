@@ -1,0 +1,68 @@
+Create an HTML Table
+Start with the basic structure:
+
+Your HTML document should have the standard structure.
+
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Simple Table Example</title>
+</head>
+<body>
+   <!-- Table should be inside the body-->
+</body>
+Create the Table Element:
+
+Inside the <body> of your HTML document, create the table element using the <table> tag.
+
+<table>
+   <!-- Table content goes here -->
+</table>
+Define Table Rows with <tr>:
+
+Inside the <table>, define the rows of your table using the <tr> (table row) tags. Each <tr> represents a row in your table.
+
+<table>
+   <tr>
+       <!-- Row 1 content -->
+   </tr>
+   <tr>
+       <!-- Row 2 content -->
+   </tr>
+   <!-- Add more rows as needed -->
+</table>
+Create Table Header with <th>:
+
+Inside each table row (<tr>), you can create header cells using the <th> (table header) tags. Table headers are typically bold and centered.
+
+<table>
+   <tr>
+       <th>Header 1</th>
+       <th>Header 2</th>
+   </tr>
+</table>
+Add Table Data with <td>:
+
+Within each table row (<tr>), use the <td> (table data) tags to add the actual data in your table. These are the regular cells that contain your content.
+
+<table>
+   <tr>
+       <th>Header 1</th>
+       <th>Header 2</th>
+   </tr>
+   <tr>
+       <td>Data 1.1</td>
+       <td>Data 1.2</td>
+   </tr>
+   <tr>
+       <td>Data 2.1</td>
+       <td>Data 2.2</td>
+   </tr>
+   <!-- Add more rows and data cells as needed -->
+</table>
+Rendered in a browser, your table would look like this:
+
+Header 1	Header 2
+Data 1.1	Data 1.2
+Data 2.1	Data 2.2

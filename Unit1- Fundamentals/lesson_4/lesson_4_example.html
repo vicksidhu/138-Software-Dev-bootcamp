@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 4 — CSS Examples</title>
+    <!-- Link to the external stylesheet for this lesson -->
+    <link rel="stylesheet" href="lesson_4_example.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  </head>
+    <!-- Header / title area -->
+     
+    <header class="site-header">
+      <h1 >Lesson 4: CSS Fundamentals</h1>
+      <p class="intro">
+        This page contains live examples of CSS concepts covered in Lesson 4,
+        including the box model, selectors, specificity, pseudo-classes,
+        inheritance, and reset/normalize styles.
+      </p>
+    </header>
+
+    <!-- Box model example -->
+    <section id="box-model" class="example">
+      <h2>Box Model</h2>
+      <p>
+        Every element is a box. The example below uses padding, border, and
+        margin so you can see each layer.
+      </p>
+
+      <div class="box-model-demo">
+        <p>Content</p>
+      </div>
+
+    </section>
+
+    <!-- Selectors + combinators section -->
+    <section id="selectors" class="example">
+      <h2>Selectors &amp; Combinators</h2>
+      <p>
+        This section demonstrates type, class, ID, attribute, and combinator
+        selectors. The list items below show how different selectors target
+        elements.
+      </p>
+
+      <ul class="selector-list">
+        <li class="type">Type selector (<code>li</code>)</li>
+        <li class="class">Class selector (<code>.class-example</code>)</li>
+        <li id="id-example">ID selector (<code>#id-example</code>)</li>
+        <li data-state="active">
+          Attribute selector (<code>[data-state="active"]</code>)
+        </li>
+      </ul>
+
+      <p class="combinator-example">
+        <span>Parent</span>
+        <span class="child">Child</span>
+        <span class="sibling">Sibling</span>
+      </p>
+
+    </section>
+
+    <!-- Specificity demonstration -->
+    <section id="specificity" class="example">
+      <h2>Specificity Examples</h2>
+      <p>
+        When multiple rules match an element, the browser uses specificity to
+        decide which style wins. This demo uses the same element with competing
+        rules.
+      </p>
+
+      <!-- This element has both a class and an ID to demonstrate specificity. -->
+      <p  id="specificityTest" class="specificity-demo" style="color: blueviolet;">Which color wins?</p>
+
+      <p class="note">
+        The ID selector in the stylesheet will take priority over the class,
+        even though they both target the same element.
+      </p>
+    </section>
+    <a href="https://www.google.com" class="google">google.com</a>
+
+    <label for="name">Name</label>
+    <input type="text" placeholder="Add your name">
+
+    <button class="btn" >Click</button>
+
+    <!-- Pseudo-class and pseudo-element demonstration -->
+    <section id="pseudo" class="example">
+      <h2>Pseudo-classes &amp; Pseudo-elements</h2>
+      <p>
+        Hover, focus, and structural pseudo-classes help us style elements based
+        on state or position.
+      </p>
+
+      <button class="pseudo-button">Hover / Focus Me</button>
+
+      <ol class="pseudo-list">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth item</li>
+      </ol>
+
+      <p class="note">
+        Hover over the button, focus it with tab, and watch how pseudo-classes
+        update the appearance. The list illustrates structural pseudo-classes.
+      </p>
+    </section>
+
+    <!-- Inheritance section -->
+    <section id="inheritance" class="example">
+      <h2>Inheritance</h2>
+      <p>
+        Some styles are inherited by children. In this example, the parent sets
+        a font and color, and the children inherit them.
+      </p>
+
+      <div class="inheritance-demo">
+        <p>This paragraph inherits font + color.</p>
+        <p class="override">This paragraph overrides the inherited color.</p>
+      </div>
+
+      <p class="note">
+        The parent container defines the font family and text color; the second
+        paragraph uses a class to override the inherited color.
+      </p>
+    </section>
+
+    <!-- Reset / normalize section -->
+    <section id="reset" class="example">
+      <h2>Reset / Normalize</h2>
+      <p>
+        The top of <code>lesson_4_example.css</code> includes a simple reset
+        that clears browser defaults and makes layout more predictable.
+      </p>
+    </section>
+
+    <footer class="lesson-footer">
+      <p>
+        Use this page as a live demo while teaching — modify the styles and
+        refresh to see how things change.
+      </p>
+    </footer>
+  </body>
+</html>

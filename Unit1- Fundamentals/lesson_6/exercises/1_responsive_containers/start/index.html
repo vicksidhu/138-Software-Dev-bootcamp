@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Containers Exercise</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="bg-primary text-white text-center p-3 mb-4">
+      <h1>Bootstrap Containers Exercise</h1>
+      <p>Resize your browser window to see how different containers behave</p>
+    </header>
+
+    <main>
+      <!-- Default Container -->
+      <section class="mb-5">
+        <h2 class="text-center mb-3">Default Container</h2>
+        <div class="container bordered-container">
+          <p>
+            This is a standard Bootstrap container. It has a fixed width that
+            changes at different breakpoints.
+          </p>
+          <p>
+            Try resizing your browser window to see how this container's width
+            changes at different screen sizes.
+          </p>
+          <div class="text-center text-md-start text-lg-end">
+            <strong>This text changes alignment based on screen size:</strong>
+            <ul>
+              <li>Centered on small screens (default)</li>
+              <li>Left-aligned on medium screens</li>
+              <li>Right-aligned on large screens</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fluid Container -->
+      <section class="mb-5">
+        <h2 class="text-center mb-3">Fluid Container</h2>
+        <div class="container-fluid bordered-container">
+          <p>
+            This is a fluid container. It takes up 100% of the width at all
+            screen sizes.
+          </p>
+          <p>Notice how it extends fully to the edges of the browser.</p>
+          <div class="d-none d-md-block">
+            <p class="bg-success text-white p-2">
+              This paragraph is hidden on small screens but visible on medium
+              and larger screens.
+            </p>
+          </div>
+          <div class="d-md-none">
+            <p class="bg-danger text-white p-2">
+              This paragraph is only visible on small screens.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Responsive Containers -->
+      <section class="mb-5">
+        <h2 class="text-center mb-3">Responsive Containers</h2>
+
+        <div class="container-sm bordered-container mb-3">
+          <p>
+            This is a <code>container-sm</code>. It's 100% wide until the small
+            breakpoint (576px).
+          </p>
+        </div>
+
+        <div class="container-md bordered-container mb-3">
+          <p>
+            This is a <code>container-md</code>. It's 100% wide until the medium
+            breakpoint (768px).
+          </p>
+        </div>
+
+        <div class="container-lg bordered-container mb-3">
+          <p>
+            This is a <code>container-lg</code>. It's 100% wide until the large
+            breakpoint (992px).
+          </p>
+        </div>
+
+        <div class="container-xl bordered-container mb-3">
+          <p>
+            This is a <code>container-xl</code>. It's 100% wide until the extra
+            large breakpoint (1200px).
+          </p>
+        </div>
+      </section>
+
+      <!-- Exercise Tasks -->
+      <section class="container mb-5">
+        <h2 class="text-center mb-4">Your Tasks</h2>
+        <div class="bg-light p-4 border rounded">
+          <div class="alert alert-info mb-4">
+            <h4 class="alert-heading">Bootstrap Breakpoint Tip</h4>
+            <p class="mb-0">
+              Bootstrap uses the pattern
+              <code>{property}-{breakpoint}-{value}</code> for responsive
+              utilities. Common breakpoints are: <code>sm</code> (≥576px),
+              <code>md</code> (≥768px), <code>lg</code> (≥992px), and
+              <code>xl</code> (≥1200px). For example,
+              <code>text-md-start</code> means "align text left starting at
+              medium screens". If no breakpoint is specified, the style applies
+              to all screen sizes.
+            </p>
+          </div>
+          <h3>Complete the following tasks:</h3>
+          <ol>
+            <li>Create a new section below with a container of your choice</li>
+            <li>
+              Create an element that is centered on mobile but right-aligned on
+              desktop
+            </li>
+            <li>
+              Add an element that changes its padding or margin at different
+              breakpoints
+            </li>
+            <li>
+              Create a section that has a different background color on mobile
+              vs desktop
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Student Work Area -->
+      <section class="mb-5">
+        <h2 class="text-center mb-3">Your Work</h2>
+        <div class="bordered-container p-3">
+          <!-- Students will add their code here -->
+          <p class="text-muted">Add your code here...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+      <p>Bootstrap Containers Exercise | Software Development Bootcamp</p>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

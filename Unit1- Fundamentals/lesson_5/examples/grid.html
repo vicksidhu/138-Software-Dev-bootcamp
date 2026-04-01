@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <title>CSS Grid Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      h1,
+      h2 {
+        color: #333;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 5px;
+      }
+
+      .explanation {
+        font-style: italic;
+        color: #555;
+        margin-bottom: 15px;
+      }
+
+      /* Basic container styling */
+      .demo-container {
+        margin-bottom: 30px;
+        border: 2px dashed #9e9e9e;
+        padding: 20px;
+      }
+
+      /* Basic grid styling */
+      .grid-container {
+        display: grid;
+        background-color: #f5f5f5;
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+
+      /* Grid items */
+      .grid-item {
+        background-color: #bbdefb;
+        padding: 20px;
+        text-align: center;
+        color: #333;
+        font-weight: bold;
+        border: 1px solid #64b5f6;
+      }
+
+      /* Basic grid example */
+      .basic-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+
+      /* Different column sizes */
+      .column-sizes {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-gap: 10px;
+      }
+
+      /* Fixed and flexible columns */
+      .fixed-flexible {
+        display: grid;
+        grid-template-columns: 100px 1fr 100px;
+        grid-gap: 10px;
+      }
+
+      /* Rows and columns */
+      .rows-columns {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100px 50px 100px;
+        grid-gap: 10px;
+      }
+
+      /* Grid placement */
+      .grid-placement {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(3, 80px);
+        grid-gap: 10px;
+      }
+
+      .span-item-1 {
+        grid-column: 1 / 3; /* Start at line 1, end at line 3 */
+        background-color: #ffecb3;
+      }
+
+      .span-item-2 {
+        grid-row: 1 / 4; /* Start at row line 2, end at row line 4 */
+        background-color: #c8e6c9;
+      }
+
+      .span-item-3 {
+        grid-column: 2 / 4; /* Start at column line 2, end at column line 4 */
+        grid-row: 3 / 4; /* Start at row line 3, end at row line 4 */
+        background-color: #f8bbd0;
+      }
+
+      /* Grid areas example */
+      .grid-areas {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+          "header header"
+          "sidebar content"
+          "footer footer";
+        grid-gap: 10px;
+        min-height: 400px;
+      }
+
+      .header {
+        grid-area: header;
+        background-color: #ffecb3;
+      }
+
+      .sidebar {
+        grid-area: sidebar;
+        background-color: #c8e6c9;
+      }
+
+      .content {
+        grid-area: content;
+        background-color: #bbdefb;
+      }
+
+      .footer {
+        grid-area: footer;
+        background-color: #f8bbd0;
+      }
+
+      /* Menu grid layout example */
+      .menu-layout {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+          "header header"
+          "nav content"
+          "footer footer";
+        grid-gap: 10px;
+        min-height: 300px;
+      }
+
+      .menu-header {
+        grid-area: header;
+        background-color: #ffecb3;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .menu-nav {
+        grid-area: nav;
+        background-color: #c8e6c9;
+        padding: 15px;
+      }
+
+      .menu-content {
+        grid-area: content;
+        background-color: #bbdefb;
+        padding: 15px;
+      }
+
+      .menu-footer {
+        grid-area: footer;
+        background-color: #f8bbd0;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .menu-nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .menu-nav li {
+        margin-bottom: 10px;
+      }
+
+      .menu-nav a {
+        text-decoration: none;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Grid Examples</h1>
+
+    <div class="explanation">
+      Grid is a two-dimensional layout system for CSS that lets you layout items
+      in rows and columns.
+    </div>
+
+    <h2>Basic Grid Structure</h2>
+    <div class="demo-container">
+      <div class="explanation">
+        A simple 3x3 grid with equal-sized columns (1fr each).
+      </div>
+
+      <div class="grid-container basic-grid">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+      </div>
+    </div>
+
+    <h2>Different Column Sizes</h2>
+    <div class="demo-container">
+      <div class="explanation">
+        Grid with different column widths: 1fr, 2fr, 1fr (middle column is twice
+        as wide).
+      </div>
+
+      <div class="grid-container column-sizes">
+        <div class="grid-item">1fr</div>
+        <div class="grid-item">2fr</div>
+        <div class="grid-item">1fr</div>
+        <div class="grid-item">1fr</div>
+        <div class="grid-item">2fr</div>
+        <div class="grid-item">1fr</div>
+      </div>
+    </div>
+
+    <h2>Fixed and Flexible Columns</h2>
+    <div class="demo-container">
+      <div class="explanation">
+        Grid with fixed width side columns and a flexible middle column.
+      </div>
+
+      <div class="grid-container fixed-flexible">
+        <div class="grid-item">100px</div>
+        <div class="grid-item">1fr (flexible)</div>
+        <div class="grid-item">100px</div>
+      </div>
+    </div>
+
+    <h2>Grid Column and Row Spans</h2>
+    <div class="demo-container">
+      <div class="explanation">Items spanning multiple columns and rows.</div>
+
+      <div class="grid-container grid-placement">
+        <div class="grid-item span-item-1">Spans 2 columns</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item span-item-2">Spans 2 rows</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item span-item-3">
+          Spans 2 columns in the bottom row
+        </div>
+      </div>
+    </div>
+
+    <h2>Grid Template Areas</h2>
+    <div class="demo-container">
+      <div class="explanation">A layout created with named grid areas.</div>
+
+      <div class="grid-container grid-areas">
+        <div class="grid-item header">Header</div>
+        <div class="grid-item sidebar">Sidebar</div>
+        <div class="grid-item content">Content</div>
+        <div class="grid-item footer">Footer</div>
+      </div>
+    </div>
+
+    <h2>Practical Example: Menu Layout</h2>
+    <div class="demo-container">
+      <div class="explanation">
+        A practical restaurant menu page layout using grid areas.
+      </div>
+
+      <div class="menu-layout">
+        <header class="menu-header">
+          <h2 style="border: none; margin: 0">Restaurant Menu</h2>
+        </header>
+
+        <nav class="menu-nav">
+          <ul>
+            <li><a href="#appetizers">Appetizers</a></li>
+            <li><a href="#mains">Main Courses</a></li>
+            <li><a href="#desserts">Desserts</a></li>
+          </ul>
+        </nav>
+
+        <main class="menu-content">
+          <h3>Main Courses</h3>
+          <p>
+            This is where the menu items would be displayed. The grid layout
+            creates a nice sidebar navigation with a larger content area.
+          </p>
+        </main>
+
+        <footer class="menu-footer">
+          <p>© 2023 Restaurant Name</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

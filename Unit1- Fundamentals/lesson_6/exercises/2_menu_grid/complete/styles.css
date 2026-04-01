@@ -1,0 +1,54 @@
+/* Custom styles for the Bootstrap Menu Grid Exercise */
+
+/* Menu category styling */
+.menu-category {
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+}
+
+.category-title {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #007bff;
+  color: #343a40;
+}
+
+/* Menu item styling */
+.menu-item {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.item-name {
+  margin-bottom: 5px;
+  color: #343a40;
+}
+
+.item-description {
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+.item-price {
+  font-weight: bold;
+  color: #28a745;
+}
+
+/* Code example styling */
+.code-block {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  overflow-x: auto;
+}

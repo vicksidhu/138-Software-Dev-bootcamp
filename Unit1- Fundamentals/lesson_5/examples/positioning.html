@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <title>CSS Positioning Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      h1,
+      h2 {
+        color: #333;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 5px;
+      }
+
+      .explanation {
+        font-style: italic;
+        color: #555;
+        margin-bottom: 15px;
+      }
+
+      /* Basic container styling */
+      .demo-container {
+        margin-bottom: 30px;
+        border: 2px dashed #9e9e9e;
+        padding: 20px;
+      }
+
+      /* Position container */
+      .position-container {
+        position: relative;
+        height: 300px;
+        background-color: #f5f5f5;
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+        padding: 15px;
+      }
+
+      /* Position box styles */
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: #bbdefb;
+        border: 1px solid #64b5f6;
+        text-align: center;
+        line-height: 100px;
+        font-weight: bold;
+      }
+
+      /* Static positioning */
+      .static-box {
+        position: static;
+        background-color: #bbdefb;
+      }
+
+      /* Relative positioning */
+      .relative-box {
+        position: relative;
+        top: 30px;
+        left: 30px;
+        background-color: #c8e6c9;
+      }
+
+      /* Absolute positioning */
+      .absolute-box {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        background-color: #ffecb3;
+      }
+
+      /* Fixed positioning */
+      .fixed-box {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #f8bbd0;
+        z-index: 100;
+      }
+
+      /* Sticky positioning */
+      .sticky-container {
+        height: 200px;
+        overflow-y: scroll;
+        border: 1px solid #ddd;
+        background-color: #f9f9f9;
+      }
+
+      .sticky-box {
+        position: sticky;
+        top: 0;
+        background-color: #b39ddb;
+      }
+
+      .content-block {
+        height: 80px;
+        margin: 10px 0;
+        background-color: #e0e0e0;
+        padding: 10px;
+      }
+
+      /* Z-index examples */
+      .z-container {
+        position: relative;
+        height: 200px;
+        background-color: #f5f5f5;
+        border: 1px solid #ddd;
+      }
+
+      .z-box {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        text-align: center;
+        line-height: 120px;
+      }
+
+      .z-1 {
+        background-color: rgba(187, 222, 251, 0.8);
+        top: 30px;
+        left: 30px;
+        z-index: 1;
+      }
+
+      .z-2 {
+        background-color: rgba(200, 230, 201, 0.8);
+        top: 60px;
+        left: 60px;
+        z-index: 2;
+      }
+
+      .z-3 {
+        background-color: rgba(255, 236, 179, 0.8);
+        top: 90px;
+        left: 90px;
+        z-index: 3;
+      }
+
+      /* Menu example with positioning */
+      .menu-container {
+        position: relative;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .menu-item {
+        position: relative;
+        border-bottom: 1px dotted #ccc;
+        padding: 15px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+      }
+
+      .menu-item:hover {
+        padding-left: 25px;
+        border-left: 5px solid #64b5f6;
+      }
+
+      .special-badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: #f44336;
+        color: white;
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 50%;
+        font-weight: bold;
+      }
+
+      .menu-item h3 {
+        margin-top: 0;
+      }
+
+      .menu-price {
+        font-weight: bold;
+        color: #333;
+        margin-top: 10px;
+      }
+
+      /* Animated example */
+      .hover-container {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        perspective: 1000px;
+      }
+
+      .hover-box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: #bbdefb;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        cursor: pointer;
+        text-align: center;
+        line-height: 200px;
+      }
+
+      .hover-container:hover .hover-box {
+        transform: rotateY(180deg);
+      }
+
+      .hover-front,
+      .hover-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+
+      .hover-front {
+        background-color: #bbdefb;
+      }
+
+      .hover-back {
+        background-color: #ffecb3;
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Positioning Examples</h1>
+
+    <div class="explanation">
+      CSS positioning allows you to control the placement of elements on a web
+      page.
+    </div>
+
+    <h2>Position: Static (Default)</h2>
+    <div class="demo-container">
+      <div class="explanation">
+        Static positioning is the default. Elements are positioned according to
+        the normal flow.
+      </div>
+
+      <div class="box static-box">Static</div>
+      <p>
+        This box has <code>position: static</code>. Offset properties (top,
+        right, bottom, left) have no effect.
+      </p>
+    </div>
+
+    <h2>Position: Relative</h2>
+    <div class="demo-container">
+      <div class="explanation">
+        Relative positioning positions an element relative to its normal
+        position.
+      </div>
+
+      <div class="box relative-box">Relative</div>
+      <p>
+        This box has <code>position: relative; top: 30px; left: 30px;</code>.
+        It's offset from where it would normally be, but still occupies its
+        original space in the flow.
+      </p>
+    </div>
+
+    <h2>Position: Absolute</h2>
+    <div class="demo-container">
+      <div class="explanation">
+        Absolute positioning positions an element relative to its nearest
+        positioned ancestor.
+      </div>
+
+      <div class="position-container">
+        <div class="box absolute-box">Absolute</div>
+        <p>
+          The container has <code>position: relative</code> and the box has
+          <code>position: absolute; top: 40px; right: 40px;</code>. The box is
+          positioned relative to the container, not in the normal flow.
+        </p>
+      </div>
+    </div>
+
+    <h2>Position: Fixed</h2>
+    <div class="demo-container">
+      <div class="explanation">
+        Fixed positioning positions an element relative to the viewport.
+      </div>
+
+      <p>
+        There is a pink box with
+        <code>position: fixed; bottom: 20px; right: 20px;</code> that stays
+        fixed at the bottom-right corner of the viewport as you scroll.
+      </p>
+      <div class="box fixed-box">Fixed</div>
+    </div>
+
+    <h2>Position: Sticky</h2>
+    <div class="demo-container">
+      <div class="explanation">
+        Sticky positioning is a hybrid of relative and fixed positioning.
+      </div>
+
+      <div class="sticky-container">
+        <div class="box sticky-box">Sticky</div>
+        <div class="content-block">Content below the sticky element.</div>
+        <div class="content-block">More content.</div>
+        <div class="content-block">Even more content.</div>
+        <div class="content-block">Scroll to see the sticky effect.</div>
+      </div>
+      <p>
+        The purple box has <code>position: sticky; top: 0;</code>. It behaves
+        like a relative-positioned element until it reaches the top of the
+        viewport, then it "sticks" in place like a fixed-positioned element.
+      </p>
+    </div>
+
+    <h2>Z-Index Stacking</h2>
+    <div class="demo-container">
+      <div class="explanation">
+        Z-index controls the stacking order of positioned elements.
+      </div>
+
+      <div class="z-container">
+        <div class="z-box z-1">z-index: 1</div>
+        <div class="z-box z-2">z-index: 2</div>
+        <div class="z-box z-3">z-index: 3</div>
+      </div>
+      <p>
+        Higher z-index values appear in front of elements with lower z-index
+        values.
+      </p>
+    </div>
+
+    <h2>Practical Example: Menu Items with Positioning</h2>
+    <div class="demo-container">
+      <div class="explanation">
+        A practical example using relative and absolute positioning for menu
+        items.
+      </div>
+
+      <div class="menu-container">
+        <div class="menu-item">
+          <div class="special-badge">New</div>
+          <h3>Truffle Risotto</h3>
+          <p>
+            Creamy Arborio rice with black truffle, mushrooms, and Parmesan
+            cheese.
+          </p>
+          <div class="menu-price">$24.99</div>
+        </div>
+
+        <div class="menu-item">
+          <h3>Grilled Salmon</h3>
+          <p>
+            Fresh Atlantic salmon, grilled and served with seasonal vegetables.
+          </p>
+          <div class="menu-price">$22.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="special-badge">Chef</div>
+          <h3>Beef Wellington</h3>
+          <p>
+            Tender filet mignon wrapped in puff pastry with mushroom duxelles.
+          </p>
+          <div class="menu-price">$32.99</div>
+        </div>
+      </div>
+      <p>
+        Hover over the menu items to see the hover effect using relative
+        positioning. The badges use absolute positioning.
+      </p>
+    </div>
+
+    <h2>Interactive Example: Hover Effect</h2>
+    <div class="demo-container">
+      <div class="explanation">
+        A creative example using positioning for an interactive effect.
+      </div>
+
+      <div class="hover-container">
+        <div class="hover-box">
+          <div class="hover-front">Hover Me</div>
+          <div class="hover-back">Positioned!</div>
+        </div>
+      </div>
+      <p>
+        Hover over the box to see the effect. This uses absolute positioning
+        with transforms.
+      </p>
+    </div>
+
+    <div style="height: 100px"></div>
+    <!-- Space to demonstrate fixed positioning -->
+  </body>
+</html>

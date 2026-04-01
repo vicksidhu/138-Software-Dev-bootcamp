@@ -1,0 +1,25 @@
+HTML Practice Exercise
+Objective: Build a basic page that includes information about your favorite musician, their skills, and pictures and videos. Try to use documentation to use tags you have not yet learned to use.
+
+HTML Structure
+
+Create an HTML file with the necessary structure: 
+<!DOCTYPE html>, <html>, <head>, and <body> tags.
+Include a title for your page within the <head> section.
+Title
+
+Make sure to add the proper title to the website.
+Biography
+
+Create a section with the musician's biography.
+Add a picture.
+Song Selection:
+
+Create a list of songs. You can make it unordered, or add hierarchy with an ordered list.
+Video:
+
+Tips:
+Experiment with text formatting (headings, paragraphs, lists, tables).
+Do not worry about making it visually appealing at this stage; focus on structuring content with HTML.
+
+Documentation: https://developer.mozilla.org/en-US/docs/Web/HTML

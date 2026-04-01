@@ -1,0 +1,17 @@
+Lesson Overview
+CSS, or Cascading Style Sheets, is a stylesheet language used in web development to describe the presentation and formatting of HTML documents. Imagine it as the visual layer websites.
+
+CSS enables developers to control the appearance of elements such as text, images, and layout. It provides a set of rules defining how HTML elements should be displayed on different devices, allowing for the creation of aesthetically pleasing and responsive web pages.
+
+CSS operates on a cascading principle, where styles can be inherited, overridden, or combined, providing a flexible and efficient way to design and structure the visual aspects of a web page. This idea of properties, functions cascading or being inherited by lower level elements is important in modern programming.
+
+Learning Objectives
+At the end of this lesson, you should be able to:
+
+Modify an HTML document using CSS
+Reference List
+The main source of information for learning something new should be the documentation. As a recommendation, go through the CSS basics | MDN.
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content
+Check the CSS Cheat Sheet.
+There are three types of CSS: Inline, Internal and External CSS. Learn the differences in a handy comparison table.
+

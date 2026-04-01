@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    /* css reset  */
+}
+/* Main heading of the page , strictly following company guidelines  */
+h1{
+    color: blue;
+    /* border: 5px solid black; */
+    margin: 25px;
+    padding: 10px;
+    font-size: 50% 
+}
+
+
+h1, p{
+    color: red !important;
+}
+
+h1{
+    color: black;
+}
+
+.paragraph {
+    color: red;
+    font-size: 50px;
+    font-weight: 100;
+    
+}
+.special-paragraph {
+    line-height: 20px;
+    border: 5px solid blue;
+}
+
+body {
+    background-color: whitesmoke;
+    /* border: 2px solid red;
+    height: 80vh; */
+
+}
+
+.container{
+    font-size: 100px;
+    width: 80%;
+    margin: 20px auto;
+    border: 2px solid black;
+}
+
+aside {
+    font-size: 5rem;
+}

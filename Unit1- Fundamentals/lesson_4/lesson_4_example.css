@@ -1,0 +1,267 @@
+
+/* --------------------------------------------------------------------------
+   Reset / Normalize
+   - Removes default browser spacing
+   - Ensures box-sizing includes padding + border
+------------------------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   Base page layout
+------------------------------------------------------------------------------*/
+body {
+   font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  color: #1b263b;
+  background: #fafafa;
+  padding: 2rem;
+}
+
+.site-header {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+}
+.site-header h1 {
+  margin-bottom: 0.25rem;
+  font-size: 2.2rem;
+}
+.site-header .intro {
+  color: #34495e;
+  font-size: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Example section styling (for layout / consistent spacing)
+------------------------------------------------------------------------------*/
+.example {
+  background: white;
+  border: 10px groove rgba(0, 0, 0, 0.606);
+  border-radius: 12px;
+  padding: 1.4rem;
+  margin-bottom: 2rem;
+  max-width: 900px;
+}
+.example h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #1a202c;
+}
+.example p {
+  margin-bottom: 0.85rem;
+}
+
+.note {
+  font-size: 0.95rem;
+  color: #5a6270;
+  margin-top: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Box Model Demo
+   - Shows padding, border, margin effect visually
+------------------------------------------------------------------------------*/
+.box-model-demo {
+  width: 250px;             /* content width */
+  padding: 16px;            /* inside space */
+  border: 3px solid #2a6f97; /* border around padding */
+  margin: 24px auto;        /* outside space (centers the box) */
+  background: #eaf4fb;      /* background covers content + padding */
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Selectors & Combinators
+------------------------------------------------------------------------------*/
+.selector-list {
+  list-style: none;
+  padding: 0;
+  max-width: 520px;
+}
+.selector-list li {
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Type selector: affects every <li> */
+.selector-list li {
+  color: #2c3e50;
+}
+
+/* Class selector */
+.selector-list li.class {
+  background: #f9f5ff;
+}
+
+/* ID selector */
+#id-example {
+  background: #fff4e6;
+}
+
+/* Attribute selector */
+[data-state="active"] {
+  background: #e6ffed;
+  border-color: #2ecc71;
+}
+
+/* Combinator examples */
+.combinator-example span {
+  display: inline-block;
+  padding: 6px 10px;
+  margin-right: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  background: #f0f4f8;
+}
+
+.combinator-example > .child {
+  border-style: dashed;
+}
+
+.combinator-example .child + .sibling {
+  background: #f1c40f;
+}
+
+.combinator-example span ~ .sibling {
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------------------------------
+   Specificity demonstration
+   - Shows which selector wins when multiple rules apply
+------------------------------------------------------------------------------*/
+
+.specificity::before{
+  content: "Hello";
+  height: 10px;
+  width: 10px;
+  display: block;
+}
+
+
+
+p.specificity-demo {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  max-width: 420px;
+}
+
+
+.google {
+  text-decoration: none;
+}
+/* This rule uses a type selector (low specificity) */
+#specificityTest {
+  color: red;
+}
+
+/* This rule uses a class selector (higher specificity) */
+p.specificity-demo {
+  color: green !important;
+}
+
+/* This rule uses an ID selector (higher specificity than class) */
+p.specificity-demo {
+  color: blue;
+}
+
+/* --------------------------------------------------------------------------
+   Pseudo-classes & pseudo-elements
+------------------------------------------------------------------------------*/
+.pseudo-button {
+  padding: 10px 16px;
+  border: 2px solid #2980b9;
+  border-radius: 8px;
+  background: #ecf0f1;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.btn{
+  padding: 10px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.btn:hover{
+  opacity: 0.5;
+}
+
+.btn:disabled{
+  background-color: red;
+}
+
+input[type="text"] {
+  border: 1px solid #ccc;
+}
+
+.pseudo-button:hover {
+  background: #1abc9c;
+  color: #fff;
+}
+
+.pseudo-button:focus {
+  outline: 3px solid #2980b9;
+}
+
+.pseudo-list {
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+.pseudo-list li {
+  margin-bottom: 0.5rem;
+}
+
+.pseudo-list li:first-child {
+  font-weight: 700;
+}
+
+.pseudo-list li:nth-child(2n) {
+  background: rgba(52, 152, 219, 0.1);
+}
+
+.pseudo-list li:not(:last-child) {
+  margin-bottom: 0.85rem;
+}
+
+/* --------------------------------------------------------------------------
+   Inheritance example
+------------------------------------------------------------------------------*/
+.inheritance-demo {
+  padding: 1rem;
+  border: 1px dashed rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  max-width: 620px;
+}
+
+.inheritance-demo p {
+  margin-bottom: 0.8rem;
+}
+
+.inheritance-demo {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #2c3e50;
+}
+
+.inheritance-demo .override {
+  color: #c0392b;
+}
+
+/* --------------------------------------------------------------------------
+   Footer / extra notes
+------------------------------------------------------------------------------*/
+.lesson-footer {
+  margin-top: 3rem;
+  max-width: 900px;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.95rem;
+}

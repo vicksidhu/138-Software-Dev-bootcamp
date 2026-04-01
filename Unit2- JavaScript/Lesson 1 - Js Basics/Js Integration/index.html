@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inline, Internal, and External JavaScript Example</title>
+
+  <!-- Bootstrap CSS for styling -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Internal JavaScript (within the head tag) -->
+  <script>
+    function changeContentInternal() {
+      var contentDiv = document.getElementById('dynamicContent');
+      contentDiv.innerHTML = 'This content was changed by internal JavaScript!';
+      contentDiv.classList.add('bg-info', 'text-white');
+    }
+  </script>
+
+</head>
+<body>
+
+  <div class="container text-center mt-5">
+    <h1 class="mb-4">Inline, Internal, and External JavaScript Example</h1>
+    
+    <!-- Button with Internal JavaScript -->
+    <button class="btn btn-warning mb-3" onclick="changeContentInternal()">Internal JS Button</button>
+    
+    <!-- Button with External JavaScript -->
+    <button class="btn btn-success mb-3" id="externalBtn">External JS Button</button>
+
+    <!-- Dynamic content area -->
+    <div id="dynamicContent" class="content-box mt-4">
+      This is the initial content. Click a button to change this text!
+    </div>
+  </div>
+
+  <!-- External JavaScript file (script.js) -->
+  <script src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+/* Custom styles for the Bootstrap Containers Exercise */
+
+/* Add a visible border to all containers to make them easier to visualize */
+.bordered-container {
+  border: 2px dashed #007bff;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+/* Add some max-width to images to make them responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Additional helper classes */
+.highlight {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+/* You can add more custom styles here if needed */

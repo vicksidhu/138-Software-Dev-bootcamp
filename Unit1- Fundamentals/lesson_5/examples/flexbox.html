@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <title>CSS Flexbox Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      h1,
+      h2 {
+        color: #333;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 5px;
+      }
+
+      .explanation {
+        font-style: italic;
+        color: #555;
+        margin-bottom: 15px;
+      }
+
+      /* Basic container styling */
+      .demo-container {
+        margin-bottom: 30px;
+        border: 2px dashed #9e9e9e;
+        padding: 20px;
+      }
+
+      /* Flex container */
+      .flex-container {
+        display: flex;
+        background-color: #f5f5f5;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        padding: 10px;
+      }
+
+      /* Flex direction examples */
+      .flex-row {
+        flex-direction: row;
+      }
+      .flex-column {
+        flex-direction: column;
+      }
+      .flex-row-reverse {
+        flex-direction: row-reverse;
+      }
+
+      /* Justify content examples */
+      .justify-start {
+        justify-content: flex-start;
+      }
+      .justify-end {
+        justify-content: flex-end;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+      .justify-between {
+        justify-content: space-between;
+      }
+      .justify-around {
+        justify-content: space-around;
+      }
+
+      /* Align items examples */
+      .align-start {
+        align-items: flex-start;
+        height: 100px;
+      }
+      .align-center {
+        align-items: center;
+        height: 100px;
+      }
+      .align-end {
+        align-items: flex-end;
+        height: 100px;
+      }
+      .align-stretch {
+        align-items: stretch;
+        height: 100px;
+      }
+
+      /* Flex wrap example */
+      .flex-wrap {
+        flex-wrap: wrap;
+      }
+
+      /* Flex items */
+      .flex-item {
+        padding: 15px;
+        background-color: #bbdefb;
+        margin: 5px;
+        color: #333;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      /* Different sized items for demos */
+      .small {
+        width: 50px;
+      }
+      .medium {
+        width: 100px;
+      }
+      .large {
+        width: 150px;
+      }
+
+      /* For align-items demo */
+      .short {
+        height: 30px;
+        line-height: 30px;
+      }
+      .tall {
+        height: 60px;
+        line-height: 60px;
+      }
+
+      /* Flex grow items */
+      .grow-container {
+        display: flex;
+      }
+
+      .grow-0 {
+        flex-grow: 0;
+        background-color: #ffecb3;
+      }
+      .grow-1 {
+        flex-grow: 1;
+        background-color: #c8e6c9;
+      }
+      .grow-2 {
+        flex-grow: 2;
+        background-color: #bbdefb;
+      }
+
+      /* Simple flexbox menu example */
+      .menu-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .menu-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border-bottom: 1px dotted #ccc;
+      }
+
+      .item-price {
+        font-weight: bold;
+        min-width: 60px;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Flexbox Examples</h1>
+
+    <div class="explanation">
+      Flexbox is a one-dimensional layout method for arranging items in rows or
+      columns.
+    </div>
+
+    <h2>Flex Direction</h2>
+    <div class="demo-container">
+      <div class="explanation">
+        The direction in which flex items are placed in the flex container.
+      </div>
+
+      <h3>flex-direction: row (default)</h3>
+      <div class="flex-container flex-row">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+      </div>
+
+      <h3>flex-direction: column</h3>
+      <div class="flex-container flex-column">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+      </div>
+
+      <h3>flex-direction: row-reverse</h3>
+      <div class="flex-container flex-row-reverse">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+      </div>
+    </div>
+
+    <h2>Justify Content</h2>
+    <div class="demo-container">
+      <div class="explanation">
+        Defines how space is distributed between and around flex items along the
+        main axis.
+      </div>
+
+      <h3>justify-content: flex-start (default)</h3>
+      <div class="flex-container justify-start">
+        <div class="flex-item small">1</div>
+        <div class="flex-item small">2</div>
+        <div class="flex-item small">3</div>
+      </div>
+
+      <h3>justify-content: flex-end</h3>
+      <div class="flex-container justify-end">
+        <div class="flex-item small">1</div>
+        <div class="flex-item small">2</div>
+        <div class="flex-item small">3</div>
+      </div>
+
+      <h3>justify-content: center</h3>
+      <div class="flex-container justify-center">
+        <div class="flex-item small">1</div>
+        <div class="flex-item small">2</div>
+        <div class="flex-item small">3</div>
+      </div>
+
+      <h3>justify-content: space-between</h3>
+      <div class="flex-container justify-between">
+        <div class="flex-item small">1</div>
+        <div class="flex-item small">2</div>
+        <div class="flex-item small">3</div>
+      </div>
+
+      <h3>justify-content: space-around</h3>
+      <div class="flex-container justify-around">
+        <div class="flex-item small">1</div>
+        <div class="flex-item small">2</div>
+        <div class="flex-item small">3</div>
+      </div>
+    </div>
+
+    <h2>Align Items</h2>
+    <div class="demo-container">
+      <div class="explanation">
+        Defines how flex items are aligned along the cross axis.
+      </div>
+
+      <h3>align-items: flex-start</h3>
+      <div class="flex-container align-start">
+        <div class="flex-item short">Short</div>
+        <div class="flex-item tall">Tall</div>
+        <div class="flex-item short">Short</div>
+      </div>
+
+      <h3>align-items: center</h3>
+      <div class="flex-container align-center">
+        <div class="flex-item short">Short</div>
+        <div class="flex-item tall">Tall</div>
+        <div class="flex-item short">Short</div>
+      </div>
+
+      <h3>align-items: flex-end</h3>
+      <div class="flex-container align-end">
+        <div class="flex-item short">Short</div>
+        <div class="flex-item tall">Tall</div>
+        <div class="flex-item short">Short</div>
+      </div>
+    </div>
+
+    <h2>Flex Grow</h2>
+    <div class="demo-container">
+      <div class="explanation">
+        The flex-grow property specifies how much a flex item will grow relative
+        to other flex items.
+      </div>
+
+      <div class="flex-container grow-container">
+        <div class="flex-item grow-0">flex-grow: 0</div>
+        <div class="flex-item grow-1">flex-grow: 1</div>
+        <div class="flex-item grow-2">flex-grow: 2</div>
+      </div>
+    </div>
+
+    <h2>Practical Example: Menu Items</h2>
+    <div class="demo-container">
+      <div class="explanation">
+        A practical example using flexbox to layout menu items with justified
+        content.
+      </div>
+
+      <div class="menu-container">
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Bruschetta</h3>
+            <p>Toasted bread with tomatoes, garlic and basil</p>
+          </div>
+          <div class="item-price">$8.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Caprese Salad</h3>
+            <p>Fresh mozzarella, tomatoes, and basil</p>
+          </div>
+          <div class="item-price">$10.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Margherita Pizza</h3>
+            <p>Classic pizza with tomato sauce, mozzarella, and basil</p>
+          </div>
+          <div class="item-price">$12.99</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

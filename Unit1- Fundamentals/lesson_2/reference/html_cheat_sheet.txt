@@ -1,0 +1,65 @@
+HTML Cheat Sheet
+The most common and fundamental HTML tags:
+
+<html>: The root element that encapsulates the entire HTML document.
+<head>: Contains meta-information about the document, including the title, character encoding, and links to external resources.
+<title>: Sets the title of the web page, which appears in the browser's title bar or tab.
+<meta>: Specifies metadata such as the character encoding, author, and viewport settings.
+<link>: Used to link to external resources like stylesheets (CSS) and web fonts.
+<script>: Includes JavaScript code or references to external JavaScript files.
+<style>: Contains inline or embedded CSS styles.
+<body>: Contains the visible content of the web page, including text, images, and other elements.
+<h1>, <h2>, <h3>, <h4>, <h5>, <h6>: Heading tags for defining section headings, with <h1> being the highest level.
+<p>: Defines a paragraph of text.
+<a>: Creates hyperlinks to other web pages or resources.
+<img>: Embeds images.
+<ul> and <ol>: Create unordered and ordered lists, respectively.
+<li>: List item element used within <ul> and <ol> for individual list items.
+<div>: A generic container for grouping and styling content.
+<span>: A generic inline container for styling content.
+<form>: Used for creating web forms for user input.
+<input>: Input fields for forms, such as text fields, checkboxes, radio buttons, and more.
+<textarea>: Defines a multiline text input area within a form.
+<button>: Creates clickable buttons within forms.
+<label>: Labels for form elements to improve accessibility and usability.
+<table>, <tr>, <th>, <td>: Used for creating tables and tabular data.
+<iframe>: Embeds external web content within a web page.
+<video> and <audio>: Embed multimedia content like videos and audio.
+<hr>: A horizontal rule, often used to separate content.
+<br>: Inserts a line break within text.
+<hr>: A horizontal rule or thematic break in content.
+<blockquote>: Indicates a block of text quoted from another source.
+<cite>: Specifies the title of a work being cited.
+<strong> and <em>: Used for emphasizing text with different levels of importance.
+These are some of the most commonly used HTML tags in web development. Depending on the specific requirements of your website, you'll use a combination of these tags to create the desired structure and layout.
+
+HTML attributes are used to provide additional information about HTML elements, and they play a crucial role in defining the behavior and appearance of web content. Here are some of the most common HTML attributes:
+
+id: Specifies a unique identifier for an element, which can be used for CSS styling or JavaScript manipulation.
+class: Assigns one or more class names to an element, enabling CSS to target and style multiple elements with the same class.
+src: Specifies the source URL for external resources like images, scripts, and iframes.
+href: Defines the URL or location of linked resources in <a> tags.
+alt: Provides alternative text for images, important for accessibility and SEO.
+width and height: Sets the dimensions of an image or a table cell.
+style: Inline CSS styles that apply to the element.
+title: Provides additional information about the element, typically displayed as a tooltip.
+target: Used in links to control how the linked content opens (e.g., _blank to open in a new tab or window).
+rel: Defines the relationship between the current document and a linked resource in <a> tags (e.g., stylesheet for linked stylesheets).
+type: Specifies the MIME type of a linked resource.
+disabled: Disables form elements like input fields and buttons.
+required: Specifies that a form field must be filled out before submitting the form.
+placeholder: Provides a hint or example value for form input fields.
+name: Identifies the name of a form input element when submitting data.
+value: Sets the initial value of a form input field.
+checked: Marks a checkbox or radio button as selected.
+selected: Specifies the default option in a dropdown select element.
+rows and cols: Define the number of rows and columns in a textarea.
+colspan and rowspan: Merge table cells horizontally or vertically.
+readonly: Makes a form input field read-only.
+min and max: Set minimum and maximum values for input fields.
+step: Specifies the increment when using input type "number."
+autofocus: Sets focus to an input element when the page loads.
+autocomplete: Enables or disables the browser's auto-fill feature for input fields.
+data-*: Allows you to store custom data attributes for JavaScript purposes.
+These are some of the most common HTML attributes, and they are used to control various aspects of HTML elements, from styling and behavior to form handling and accessibility.
+
